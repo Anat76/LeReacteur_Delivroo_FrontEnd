@@ -77,17 +77,6 @@ main > div:first-child {
   justify-content: space-between;
 }
 
-main article {
-  width: 48%;
-  height: 160px;
-  margin-bottom: 20px;
-  background-color: white;
-  border-radius: 6px;
-  padding: 10px;
-  box-sizing: border-box;
-  display: flex;
-}
-
 main .left {
   flex: 70;
   background-color: green;
@@ -106,10 +95,16 @@ main img {
   margin-left: 10px;
 }
 
-main {
-  padding: 20px 0;
+main article {
+  width: 48%;
+  height: 160px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 6px;
+  padding: 10px;
+  box-sizing: border-box;
   display: flex;
-  gap: 30px;
+  flex-wrap: nowrap;
 }
 
 main .description-meal {
@@ -121,4 +116,14 @@ main .description-meal {
   font-size: 14px;
   color: #808484;
   overflow: hidden;
+  margin: 25px 0;
+}
+
+main .price {
+  display: flex;
+  gap: 10px;
+}
+main .populaire {
+  color: #ff8000;
+  font-weight: bold;
 }
