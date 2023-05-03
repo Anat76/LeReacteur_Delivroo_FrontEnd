@@ -79,7 +79,7 @@ main > div:first-child {
 
 main .left {
   flex: 70;
-  background-color: green;
+  /* background-color: green; */
 }
 main .right {
   height: 10px;
@@ -105,6 +105,8 @@ main article {
   box-sizing: border-box;
   display: flex;
   flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 main .description-meal {
@@ -127,3 +129,22 @@ main .populaire {
   color: #ff8000;
   font-weight: bold;
 }
+
+main .meal-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* =======CARD======= */
+
+.cart {
+  border: red solid 1px;
+  width: 90%;
+  height: 190px;
+  display: flex;
+  margin: 0 auto;
+  padding: 10px;
+}
+/* .cart button {
+} */

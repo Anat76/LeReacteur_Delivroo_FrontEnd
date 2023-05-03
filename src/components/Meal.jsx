@@ -1,6 +1,6 @@
-const Meal = ({ meal }) => {
+const Meal = ({ meal, cart, setCart }) => {
   return (
-    <article>
+    <article onClick={() => {}}>
       <div>
         <h3>{meal.title}</h3>
         <p className="description-meal">{meal.description}</p>

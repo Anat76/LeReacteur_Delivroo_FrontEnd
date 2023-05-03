@@ -11,6 +11,8 @@ const App = () => {
   // State qui permet de savoir si la requete au serveur est bien arrivée
   const [isLoadind, setIsLoading] = useState(true);
 
+  const [cart, setCart] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -40,7 +42,7 @@ const App = () => {
         ) : (
           <>
             <Restaurants data={data} />
-            <Categories data={data} />
+            <Categories data={data} cart={cart} setCart={setCart} />
           </>
         )}
       </div>

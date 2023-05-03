@@ -1,7 +1,9 @@
 import Meal from "./Meal";
+import Carts from "./Carts";
 
-const Categories = ({ data }) => {
+const Categories = ({ data, cart, setCart }) => {
   //   console.log(data);
+
   return (
     <main>
       <div className="global-container">
@@ -11,10 +13,19 @@ const Categories = ({ data }) => {
               return (
                 <div key={category.name}>
                   <h2>{category.name}</h2>
-                  {category.meals.map((meal) => {
-                    //   console.log(meal);
-                    return <Meal key={meal.id} meal={meal} />;
-                  })}
+                  <div className="meal-container">
+                    {category.meals.map((meal) => {
+                      //   console.log(meal);
+                      return (
+                        <Meal
+                          key={meal.id}
+                          meal={meal}
+                          cart={cart}
+                          setCart={setCart}
+                        />
+                      );
+                    })}
+                  </div>
                 </div>
               );
             } else {
@@ -22,7 +33,9 @@ const Categories = ({ data }) => {
             }
           })}
         </section>
-        <section className="right"></section>
+        <section className="right">
+          <Carts cart={cart} setCart={setCart} />
+        </section>
       </div>
     </main>
   );
