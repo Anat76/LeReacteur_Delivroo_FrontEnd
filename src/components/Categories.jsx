@@ -34,7 +34,7 @@ const Categories = ({ data, cart, setCart }) => {
           })}
         </section>
         <section className="right">
-          <Carts cart={cart} setCart={setCart} />
+          <Carts cart={cart} setCart={setCart} meal={data.categories.meal} />
         </section>
       </div>
     </main>

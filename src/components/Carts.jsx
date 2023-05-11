@@ -1,4 +1,4 @@
-const Card = ({ cart, setCart }) => {
+const Card = ({ meal, cart, setCart }) => {
   const handleAddToCart = () => {
     const copyCart = [...cart];
     copyCart.push({ ...meal, quantity: 1 });
